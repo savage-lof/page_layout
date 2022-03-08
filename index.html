@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+<title>Коротко о HTML</title>
+<link rel="stylesheet" type="text/css" href="css/main.css">
+   	 <link rel="stylesheet" type="text/css" href="css/light.css" id="theme-link">
+<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400&display=swap" rel="stylesheet">
+</head>
+<body>
+<div class="theme-button" id="theme-button">Темная тема</div>
+<h1 class="title" id="start">Коротко о HTML</h1>
+<p>Данный конспект содержит основную информацию о языке разметки HTML: что такое HTML, зачем он нужен, как используется. 
+Также кратко описана струтктура HTML-документа, список основных тегов с описанием их назначения, перечень параметров данных тегов.</p>
+<div style="padding-top: 20pt; padding-bottom: 20pt;">
+<h2>Содержание:</h2>
+<ol>
+    <h3><li><a href="#what">Что такое HTML</a></li></h3>
+    <h3><li><a href="#base">Базовый синтаксис HTML</a></li></h3>
+    <h3><li><a href="#head">Тег &lthead&gt</a></li></h3>
+    <h3><li><a href="#layout">HTML5 Layout</a></li></h3>
+    <h3><li><a href="#format">Форматирование текста</a></li></h3>
+    <h3><li><a href="#table">Таблицы</a></li></h3>
+    <h3><li><a href="#descript">Более детальное описание структуры HTML</a></li></h3>
+</ol>
+</div>
+<h2 id="what">Что такое HTML</h2>
+<p>HTML, он же <b>HyperText Markup Languge</b> - язык разметки гипертекста, используется для описания структуры содержимого веб-страниц, 
+    а именно, расположения элементов друг относительно друга, их внешнего представлния, их функций. Элементами веб-страницы могут быть <i>заголовок, 
+    боковое меню, окошко поиска, странички с контентом, встроенное видео и т.д.</i> HTML Определяет, как они будут отображаться (шрифт, размер, 
+    используемые стили), как они будут расположены на странице, как они будут взаимодействовать (ссылки, выпадающие списки, зависимые поля). 
+    Для красивого отображения элементов в HTML и страницы в целом обычно используеттся CSS (Cascading Style Sheets) - документ описания стилей. 
+    Также в веб-страницы можно встраивать динамические элементы, например, браузерные игры, перемещаемые пользовалелем окошки, кнопки со сложным поведением и т.д. 
+    Все это становится возможным благодаря использованию скриптов, написанных на JavaScript, которые также явно указываются в HTML-документе.</p>
+<p>Окончательный облик страницы формируется браузером после парсинга HTML-документа, описывающего эту страницу. В зависимости от браузера разные 
+    стили могут отображаться по-разному, а определенные элементы могут не поддерживатся некоторыми (обычно старыми или Explorer) браузерами. 
+    Все это надо учитывать при формировании HTML-документа.</p>
+<img src="/images/1.jpg" alt="Здесь должна быть картинка">
+<h2 id="base">Базовый синтаксис HTML</h2>
+<p>Обычно HTML-разметка страницы содержится в файле <code>index.html</code>.</p>
+<p>HTML документ состоит из тегов. <b>HTML не чувствителен к регистру в имени тегов!</b></p>
+<p>Теги бывают с содержимым: <code>&lthead&gt Содержимое &lt/head&gt</code> и пустыми: <code>&ltbr&gt</code>. Теги можно вкладывать друг в друга:</p>
+<div class="code-in-poligon">
+<pre>   &lthtml&gt
+        &lthead&gt
+            Информация в head
+        &lt/head&gt
+    &lt/head&gt  
+</pre>
+</div>
+<p>Внутри тега можно задавать параметры или, что то же самое, атрибуты: <code>&ltsection class="main"&gt</code></p>
+<p>Каждый HTML документ начинается с тега-декларации <code>&lt!DOCTYPE html&gt</code>. Таким образом браузер понимает, что он читает 
+    именно HTML. Далее идет корневой тег , в который вложены все остальные теги - <code>&lthtml&gt&lt/html&gt</code>. В нем находятся 
+    два тега <code>&lthead&gt&lt/head&gt</code> и <code>&ltbody&gt&lt/body&gt</code>. Первый нужен для хранения метаинформации, которая не 
+    отображается на странице: заголовка, скриптов, стилей и т.д.. Второй используется для описания видимых частей.</p>
+<div class="code-in-poligon">
+<pre>   &lt!DOCTYPE html&gt
+    &lthtml&gt
+        &lthead&gt
+            Информация в head
+        &lt/head&gt
+        &ltbody&gt
+            Информация в body
+        &lt/body&gt
+    &lt/html&gt
+</pre>
+</div>  
+<h3>Краткое саммери:</h3>
+<table class="table">
+    <thead><tr><th>Тег</th><th>С содержимым</th><th>Описание</th></tr></thead>
+    <tbody><tr><td><code>&lt!DOCTYPE html&gt</code></td><td>нет</td><td>Тег-декларация документа</td></tr>
+    <tr><td><code>&lthtml&gt</code></td><td>да</td><td>Корневой тег</td></tr>
+    <tr><td><code>&lthead&gt</code></td><td>да</td><td>Тег для метаинформанции</td></tr>
+    <tr><td><code>&ltbody&gt</code></td><td>да</td><td>Определяет тело документа (видимую область)</td></tr></tbody>
+</table>
+<h2 id="head">Тег &lthead&gt</h2>
+<p>Тег <code>&lthead&gt</code> используется для описания метаинформации о веб странице (информация об информации). 
+    Эта информация не видна пользователю, а используется браузерами и поисковыми движками.</p>
+<p>Один из наиболее важных тегов, используемых в <code>&lthead&gt</code> это незакрывающийся <code>&ltmeta&gt</code>. 
+    С его помощью можно задать используемую кодировку, добавить описание страницы, ключевые слова для поисковиков, имя автора.</p>
+<div class="code-in-poligon">
+<pre>
+    &ltmeta charset="UTF-8"&gt
+    &ltmeta name="description" content="Free Web tutorials"&gt
+    &ltmeta name="keywords" content="HTML,CSS,XML,JavaScript"&gt
+    &ltmeta name="author" content="John Doe"&gt
+</pre>
+</div>
+<p>Для того, чтобы сделать веб-страницу адаптивной, т.е. чтобы она подстраивалась под разменры экрана устройства, 
+    нужно использовать <code>viewport</code>. Этот параметр обязательно надо добавлять для всех страниц.</p>
+<div class="code-in-poligon">
+    <pre>   &ltmeta name="viewport" content="width=device-width, initial-scale=1.0"&gt</pre>
+</div>
+<p>Внутри <code>&lthead&gt</code> можно задавать внутрениие стили для документа:</p>
+<div class="code-in-poligon">
+<pre>   &ltstyle&gt
+      header {
+        text-allign: center;
+      }
+    &lt/style&gt
+</pre>
+</div>
+<p>И внешние стили:</p>
+<div class="code-in-poligon">
+<pre>   &ltlink rel="stylesheet" href="mystyle.css"&gt</pre>
+</div>
+<p>Также внутри <code>&lthead&gt</code> обычно указываются срипты:</p>
+<div class="code-in-poligon">
+    <pre>   &ltscript&gt
+    function myFunction {
+        document.getElementById("demo").innerHTML = "Hello JavaScript!";
+    }
+    &lt/script&gt</pre>
+</div>
+<p>Еще один тег - &ltbase&gt - используется для указания основного URL страницы, относительно которого разрешаются все остальные URL на странице:</p>
+<div class="code-in-poligon">
+    <pre>   &ltbase href="https://www.w3schools.com/images/" target="_blank"&gt</pre>
+    </div>
+<h2 id="layout">HTML5 Layout</h2>
+<p>HTML5 предоставляет набор тегов для удобной разметки стандартной структуры большинства страниц</p>
+<div class="code-in-poligon">
+<pre>   &ltbody&gt
+        &ltheader&gt
+            &ltnav&gt
+                Navigation
+            &lt/nav&gt
+        &lt/header&gt
+        &ltsection&gt
+            &ltmain&gt
+                &ltarticle&gt
+                    Article
+                &lt/article&gt
+                &ltarticle&gt
+                    Article
+                &lt/article&gt
+            &lt/main&gt
+            &ltaside&gt
+                Aside element
+            &lt/aside&gt
+        &lt/section&gt
+        &ltfooter&gt
+            Footer
+        &lt/footer&gt
+    &lt/body&gt</pre>
+</div>
+<h2 id="format">Форматирование текста</h2>
+<p>Текст в HTML обычно помещают в заголовках:</p>
+<div class="code-in-poligon">
+<pre>   &lth1&gt
+     Заголовок первого уровня
+    &lt/h1&gt
+    &lth6&gt
+     Заголовок шестого уровня
+    &lt/h6&gt</pre>
+</div>
+<p>в параграфах:</p>
+<div class="code-in-poligon">
+<pre>   &ltp&gt
+     Какая-нибудь статья
+    &lt/p&gt
+    &ltpre&gt
+     Какая-нибудь статья с сохранением переносов строк и пробелов
+    &lt/pre&gt</pre>
+</div>
+<div class="code-in-poligon">
+<pre>   &ltblockquote site="http://twitter.com"&gt
+     "Самое трудное в жизни - засунуть одеяло в пододеяльник" - Джейсон Стетхем
+    &lt/blockquote&gt</pre>
+</div>
+<p>и как код:</p>
+<div class="code-in-poligon">
+<pre>    &ltcode&gt
+    html,body {
+        padding: 0;
+        height: 100%;
+        margin: 0px;
+        overflow: hidden;
+    }&lt/code&gt</pre>
+</div>
+<p>Для форматирования используется следующий набор тегов:</p>
+<table class="table">
+    <thead><tr><th>Тег</th><th>Описание</th></tr></thead>
+    <tbody><tr><td><code>&lta&gt</code></td><td>Ссылка куда-нибудь -  подчеркивание и другой цвет</td></tr>
+    <tr><td><code>&ltb&gt</code></td><td>Bold</td></tr>
+    <tr><td><code>&lti&gt</code></td><td>Italics</td></tr>
+    <tr><td><code>&ltem&gt</code></td><td>Italics with emphasis</td></tr>
+    <tr><td><code>&ltstrong&gt</code></td><td>Bold with emphasis</td></tr>
+    <tr><td><code>&ltmark&gt</code></td><td>Bold with emphasis</td></tr>
+    <tr><td><code>&ltbr&gt</code></td><td>Переход на другую строку</td></tr>
+    <tr><td><code>&ltq&gt&lt/q&gt</code></td><td>Кавычки</td></tr></tbody>
+</table>
+<h2 id="table">Таблицы</h2>
+<div class="code-in-poligon">
+<pre>    &lttable class="styled"&gt
+        &ltcolgroup&gt
+            &ltcol style="background-color: blueviolet;"&gt
+        &lt/colgroup&gt
+        &ltcolgroup&gt
+            &ltcol style="background-color: #f4e767;" span="2"&gt
+        &lt/colgroup&gt
+        &ltthead&gt
+            &lttr&gt
+                &ltth>First Name&lt/th&gt
+                &ltth>Last Name&lt/th&gt
+                &ltth>Email&lt/th&gt
+            &lt/tr&gt
+        &lt/thead&gt
+        &lttbody&gt
+            &lttr&gt
+                &lttd>John&lt/td&gt
+                &lttd>Doe&lt/td&gt
+                &lttd>Johnny.doe@gmail.com&lt/td&gt
+            &lt/tr&gt
+            &lttr&gt
+                &lttd>Jane&lt/td&gt
+                &lttd>Doe&lt/td&gt
+                &lttd>i_heart_johnny@gmail.com&lt/td&gt
+            &lt/tr&gt
+        &lt/tbody&gt
+    &lt/table&gt</pre>
+</div>
+<h2 id="descript">Более детальное описание структуры HTML</h2>
+<table class="table">
+    <thead><tr><th>Тег</th><th>Самые важные атрибуты</th><th>Описание</th></tr></thead>
+    <tbody><tr><td><code>&lth1&gt - &lth6&gt</code></td><td>?</td><td>Заголовки разных уровней</td></tr>
+    <tr><td><code>&ltp&gt</code></td><td>style (CSS cстиль), title (заголовок параграфа)</td><td>Параграф</td></tr>
+    <tr><td><code>&lt/pre&gt</code></td><td>style (CSS cстиль), title (заголовок параграфа)</td><td>Аналог параграфа, сохраняет пробелы и переносы строк</td></tr>
+    <tr><td><code>&lta&gt</code></td><td>href (куда ссылается)</td><td>Ссылка куда-нибудь</td></tr>
+    <tr><td><code>&ltimg&gt</code></td><td>src, alt (альтернатива картинке, напр. текстовое описание), width, heigth</td><td>Картинка</td></tr>
+    <tr><td><code>&ltbutton&gt</code></td><td>?</td><td>Кнопка</td></tr>
+    <tr><td><code>&ltul&gt</code></td><td>?</td><td>Маркерованный список</td></tr>
+    <tr><td><code>&ltol&gt</code></td><td>?</td><td>Нумерованный список</td></tr>
+    <tr><td><code>&ltli&gt</code></td><td>?</td><td>List item</td></tr>
+    <tr><td><code>&ltbr&gt</code></td><td>?</td><td>Переход на другую строку</td></tr>
+    <tr><td><code>&lthr&gt</code></td><td>?</td><td>Horizontal row (разделитель текста)</td></tr></tbody>
+</table>
+<p>Полезные ссылки для изучения данной темы:</p>
+<ul>
+<li><p>Более подробно с HTML можно ознакомиться на сайте-справочнике <a href="http://htmlbook.ru/">htmlbook.ru</a></p></li>
+<li><p>Онлайн тренажер <a href="https://htmlacademy.ru/">htmlacademy.ru</a></p></li>
+<li><p>Примерка дизайна <a href="https://dabblet.com/">dabblet.com</a></p></li>
+</ul>
+<a href="#start">В начало</a>
+<script src="/scripts/script.js"></script>
+</body>
+</html>

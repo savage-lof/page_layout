@@ -1,0 +1,48 @@
+body{
+    background: black;
+    color: #d8cecead;
+}
+
+.theme-button{
+    color: #f4f4f4;
+    background: #4f7faf;
+}
+
+.theme-button:hover{
+    background: #6f9fcf;
+}
+
+code{
+    color: rgb(228, 205, 205);
+}
+
+code.inside{
+    color: rgb(122, 99, 99);
+    background: #e9eaec;
+}
+
+div.code-in-poligon{
+    background: #6b6c6d91;
+}
+
+pre{
+    color: #e9eaec;
+}
+
+.title {
+    color: #d8cecead;
+}
+
+.title:before,
+.title:after {
+    background-color: #d8cecead;
+}
+
+.table th {
+	background: #000000;
+	border: 1px solid #dddddd;
+}
+
+.table td {
+	border: 1px solid #dddddd;
+}

@@ -1,0 +1,45 @@
+body{
+    background: linear-gradient(to right, rgba(42, 68, 138, 0.363) 10%, rgb(255, 255, 255) 30%, rgb(255, 255, 255) 70%, rgba(42, 68, 138, 0.363) 100%);
+}
+
+.theme-button
+{
+    color: #f4f4f4;
+    background: #444;
+}
+
+.theme-button:hover
+{
+    background: #555;
+}
+
+code{
+    color: rgb(122, 99, 99);
+    background: #e9eaec;
+  }
+
+code.inside{
+    color: rgb(122, 99, 99);
+    background: #e9eaec;
+}
+
+div.code-in-poligon{
+    background: #6b6c6d91;
+}
+
+pre{
+    color: #e9eaec;
+}
+
+.title:before,
+.title:after {
+    background-color: #000000;
+}
+
+.table th {
+	background: #efefef;
+	border: 1px solid #dddddd;
+}
+.table td {
+	border: 1px solid #dddddd;
+}

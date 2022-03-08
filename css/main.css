@@ -1,0 +1,105 @@
+body{
+    padding: 20%;
+    padding-top: 5%;
+}
+
+@font-face {
+    font-family: 'Montserrat';
+    src: local('Montserrat Regular'), local('Montserrat-Regular'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff2') format('woff2'), url('http://hb.bizmrg.com/fonts/montserrat/400.woff') format('woff');
+}
+.theme-button
+{
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    display: inline-block;
+    padding: 10px 25px;
+    cursor: pointer;
+}
+
+img {
+    width: 100%;
+    height: auto;
+  }
+
+h1, h2, h3{
+    font-family: 'Montserrat';
+}
+
+code{
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-all;
+    white-space:pre;
+  }
+
+code.inside{
+    padding: 2px 4px;
+    border-radius: 4px;
+    font-size: 14px;
+    white-space: pre-wrap;
+    word-break: break-all;
+}
+
+p{
+    font-family: 'Courier New', Courier, monospace;
+    text-align: justify;
+    font-size: 15pt;
+    text-indent: 20px;
+}
+
+div.code-in-poligon{
+    border-radius: 10px;
+}
+
+pre{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    font-size: 14pt;
+}
+
+.title {
+    overflow: hidden;
+    text-align: center;
+    font-size: 30pt;
+}
+
+.title:before,
+.title:after {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 100%;
+    height: 4px;
+    position: relative;
+}
+.title:before {
+    margin-left: -100%;
+    left: -14px;
+}
+.title:after {
+    margin-right: -100%;
+    right: -14px;
+}
+
+
+.table {
+	width: 100%;
+	margin-bottom: 20px;
+	border-collapse: collapse; 
+}
+.table th {
+	font-weight: bold;
+	padding: 5px;
+}
+.table td {
+	padding: 5px;
+}
+.table tr td:first-child, .table tr th:first-child {
+	border-left: none;
+}
+.table tr td:last-child, .table tr th:last-child {
+	border-right: none;
+}
